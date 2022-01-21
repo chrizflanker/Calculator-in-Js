@@ -1,10 +1,103 @@
-<html>
+<Html>
 	<head>
+		<style>
+		
+		body{
+			background-color: #00000e;
+			text-align: center;
+		}
+		
+		.header h1{
+			text-align: center;
+			color: white;
+			font-size: 50px;
+		}
+		.calculator {
+			padding-top: 50px;
+			border-top: 10px solid darkorange;
+			border-bottom: 4px solid darkorange;
+			margin-left: 25%;
+    		margin-right:25%;
+    		width: 50%;
+			
+			
+		}
+		.calculator form{
+			color: white;
+			border-left: 6px solid white;
+			border-right: 6px solid white;
+			text-align: center;
+			margin-left: 25%;
+    		margin-right:25%;
+    		width: 50%;
+
+		}
+		input{
+        	width:300px;
+        	height:30px;
+        	text-align: center;
+        	outline: none;
+        	background:transparent;
+        	border:1px solid #ffc107;
+       		color:#ffc107;
+        	border-radius: 20px;
+        	margin-bottom: 20px;
+
+    	}
+
+    	select{
+    		margin-top: 20px;
+    		margin-bottom: 20px;
+     		border:hidden;
+     		border-radius: 5px;
+     		height:30px;
+     		background-color: darkorange;
+     		color: white;
+   		}
+   		option{
+      		background-color: #00000e;
+    	}
+
+    	button{
+    	 	margin-top: 20px;
+    		margin-bottom: 20px;
+     		border:hidden;
+     		border-radius: 5px;
+     		height:30px;
+     		background-color: darkorange;
+     		color: white;
+   		}		
+
+   		.calculator form #result{
+   			color: white;
+   			text-decoration: underline;
+   			text-underline: 2px solid white;
+   			font-size: 20px;
+   		}
+		
+			
+		</style>
+		
 	</head>
 	<body>
+		<div class="header">
+			<h1> Hello Let's Have <span style="color:darkorange">Fun Doing Maths! </span></h1>
+		</div>
+
+		<div class="calculator">
+
 		<form>
-			Value1:<input type="text" id="value1">
-			Value2:<input type="text" id="value2">
+			<h2 style="color:white"><span style="color: darkorange">My</span>Calculator</h2>
+			<div>
+			<label>Value1:</label><br>
+			<input type="text" id="value1"><br>
+		</div>
+		<div>
+			<label>Value2:</label><br>
+
+			<input type="text" id="value2"><br>
+		</div>
+			
 			<select id="operator">
 				<option value="add">Add</option>
 				<option value="sub">Subtract</option>
@@ -12,9 +105,10 @@
 				<option value="mul">Multiply</option>
 			</select>
 			<button type="button" onClick="calc()">Calculate</button>
+		<div id="result"></div>
 		</form>
 
-		<div id="result"></div>
+		
 	</body>
 	<script src="main.js"></script>
 
